@@ -1,0 +1,758 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    padding-top: 80px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #FFFFFF;
+
+
+
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background: #ffffff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    /* margin in header bottom */
+}
+
+h2 {
+    font-weight: 500;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 40px;
+    line-height: 1em;
+    color: #6a2f85;
+
+}
+
+/* h3 {
+    text-align: left;
+    text-justify: inter-word;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+} */
+
+p {
+    text-align: justify;
+    text-justify: inter-word;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    line-height: 1.5em;
+}
+
+
+
+
+#logo img {
+    max-width: 100%;
+    height: auto;
+    animation: moveRight 2s ease-out;
+}
+
+@keyframes moveRight {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+section {
+    padding: 20px;
+}
+
+
+/* Style for the section containing the image */
+.image-section {
+    text-align: center;
+    margin-top: 5px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Style for the image container */
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+
+/* Download button Section */
+.download-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.download-button {
+    background-color: #6a2f85;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    height: 40px;
+    width: 200px;
+    font-size: 15px;
+}
+
+.download-button:hover {
+    background-color: #954c8b;
+}
+
+/* end of download button */
+
+
+
+
+/* Style for the section containing the slideshow */
+.mySlides {
+    display: none
+}
+
+img {
+    vertical-align: middle;
+}
+
+.mySlides {
+    display: none
+}
+
+img {
+    vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+
+}
+
+/* Style for the slideshow arrows */
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: #ffffff;
+    background-color: #383739;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+/* Position the left arrow to the left side */
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Position the right arrow to the right side */
+.next {
+    right: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/4 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/*  dots */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* On smaller screens, decrease the text size */
+@media only screen and (max-width: 300px) {
+
+    .prev,
+    .next,
+    .text {
+        font-size: 11px
+    }
+}
+
+/* img-section end*/
+
+/* Style for Swiper navigation buttons */
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #fff;
+    font-size: 24px;
+    height: 100%;
+    width: 40px;
+
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Adjust the color of the active button */
+.swiper-button-prev.swiper-button-black,
+.swiper-button-next.swiper-button-black {
+    color: white;
+}
+
+/* Style for Swiper pagination */
+.swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background-color: #ddd;
+    margin: 0 5px;
+    opacity: 1;
+    transition: background-color 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: rgb(0, 0, 0) !important;
+}
+
+/* slide image end */
+
+
+
+/* testimonial */
+.testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+    background-color: #F7F7F7;
+    padding: 20px;
+}
+
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.video-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.video-iframe-block,
+.video-text-block {
+    flex: 1;
+    min-width: 300px;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.video-iframe-block iframe,
+.video-iframe-block video {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .video-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .video-text-block {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+    }
+}
+
+
+.see-video-button {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border: 1px solid #dddddd;
+    backdrop-filter: blur(5px);
+    cursor: pointer;
+    color: white;
+}
+
+.see-video-button:hover {
+    background-color: #bfb5c1;
+}
+
+/* end of testimonial */
+
+
+/* Style for the event slideshow container */
+/* Center the event slider */
+.event-slider-container {
+    position: relative;
+    margin: auto;
+    max-width: 70%;
+    /*can Adjust the width as we need*/
+    overflow: hidden;
+    height: 450px;
+}
+
+/* Style for the event slides */
+.event-slides {
+    width: 100%;
+    display: none;
+    transition: transform 0.5s;
+}
+
+/* Style for the event arrow marks */
+.event-prev,
+.event-next {
+    position: absolute;
+    top: 50%;
+    font-size: 30px;
+    color: white;
+    background-color: #000000;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    transform: translate(0%, -50%);
+    z-index: 1;
+}
+
+/* Apply a black glass effect to the arrows */
+.event-prev,
+.event-next {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Position the event left arrow to the left side */
+.event-prev {
+    left: 0;
+}
+
+/* Position the event right arrow to the right side */
+.event-next {
+    right: 0;
+}
+
+/* On hover, darken the background color of the arrows */
+.event-prev:hover,
+.event-next:hover {
+    background-color: #555252;
+}
+
+.event-slides {
+    width: 100%;
+    height: 100%;
+    display: none;
+    transition: transform 0.5s;
+}
+
+
+/* Style for the images inside the slides */
+.event-slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.event-slider-container {
+    position: relative;
+    margin: auto;
+    max-width: 70%;
+    overflow: hidden;
+}
+
+
+
+
+
+/* Places Section */
+.places-section {
+    /* text-align: center; */
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #EEEEEE;
+    color: #000000;
+}
+
+/* Place Block */
+.place-block {
+    display: inline-block;
+    width: calc(25% - 20px);
+    margin: 6px;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-align: left;
+    padding: 2px;
+    animation: slideUp 1s ease-out;
+}
+
+/* Adjust the transition for smoother effect */
+/* .location-block:hover {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.place-block h3 {
+    margin: 0;
+}
+
+.place-block p {
+    margin-top: 5px;
+    margin-bottom: 0;
+} */
+
+
+
+/* Copyright Section */
+.copyright-section {
+    text-align: center;
+    padding: 3px;
+    background: #393E46;
+    color: #ddd;
+
+}
+
+/* copyright close*/
+
+.header-download-button {
+    margin-right: 50px;
+    /* Adjust the margin as needed */
+}
+
+
+
+/* Infinity images */
+.inifinite {
+    background-color: #393E46;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.slider {
+    height: 110px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 80%;
+}
+
+.slider .slide-track {
+    -webkit-animation: scroll 30s linear infinite;
+    animation: scroll 30s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+}
+
+.slider .slide {
+    height: 100px;
+    width: 250px;
+}
+
+.slider .slide img {
+    width: 80%;
+    height: 100px;
+    border-radius: 10px;
+    border: 2px solid #bbbbbb;
+}
+
+@-webkit-keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-250px * 7));
+    }
+}
+
+/* end of infinity */
+
+
+
+
+
+
+
+
+
+/* ******************************************************MEDIA QERIES ************************************************** */
+
+/* Media Query for small screens */
+@media only screen and (max-width: 600px) {
+    body {
+        padding-top: 50px;
+        margin-top: 50px;
+    }
+
+    header {
+        padding: 5px;
+    }
+
+    #logo img {
+        max-width: 100%;
+        height: auto;
+        width: 150px;
+    }
+
+    .download-button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    .header-download-button {
+        margin-right: 10px;
+    }
+}
+
+/* Media Query for intro-video-section */
+@media screen and (max-width: 767px) {
+    .video-content {
+        flex-direction: column;
+    }
+
+    .video-iframe-block iframe {
+        width: 100%;
+        height: auto;
+    }
+
+    .video-text-block {
+        margin-left: 0;
+    }
+}
+
+
+/* Media Query for product section Mobile Devices */
+@media screen and (max-width: 767px) {
+    .our-products-section img {
+        width: 100%;
+    }
+
+    .our-products-section h2 {
+        font-size: 30px;
+    }
+}
+
+
+/* Media Query for slide show Design */
+@media screen and (max-width: 768px) {
+    .slideshow-container {
+        max-width: 100%;
+    }
+
+    .prev,
+    .next {
+        font-size: 14px;
+    }
+
+    .text,
+    .numbertext {
+        font-size: 10px;
+    }
+
+    .dot {
+        height: 10px;
+        width: 10px;
+        margin: 0 2px;
+    }
+}
+
+
+/* Media Query for Testimonial Design */
+@media screen and (max-width: 768px) {
+    .video-container {
+        flex-direction: column;
+    }
+
+    .video-text-block,
+    .video-iframe-block {
+        max-width: 100%;
+        margin: 0;
+        padding: 10px;
+    }
+
+    iframe,
+    video {
+        width: 100%;
+        height: auto;
+
+    }
+}
+
+
+
+/* Media Query for Location Design
+@media screen and (max-width: 768px) {
+    .place-block {
+        width: calc(50% - 20px);
+    }
+} */
+.places-section {
+    width: 90%;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.header1 {
+    text-align: center;
+    font-size: 40px;
+    color: #6c3b8e;
+    margin-bottom: 20px;
+}
+.columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.column {
+    flex: 1;
+    padding: 15px;
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.column:last-child {
+    border-right: none;
+}
+.column h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+.column p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+.column a {
+    text-decoration: none;
+    color: #0056b3;
+}
+.column a:hover {
+    text-decoration: underline;
+}
+.icon {
+    width: 20px;
+    height: 15px;
+    margin-right: 5px;
+}
+@media (max-width: 1200px) {
+    .column {
+        flex: 0 0 48%;
+        margin-bottom: 20px;
+    }
+    .column:nth-child(2n+1) {
+        border-right: none;
+    }
+    .column:nth-child(2n) {
+        border-right: 1px solid #ccc;
+    }
+}
+@media (max-width: 768px) {
+    .column {
+        flex: 0 0 100%;
+        border-right: none;
+    }
+}
+
+/* Media Query for copyright Design */
+@media screen and (max-width: 768px) {
+    .copyright-section {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+}
